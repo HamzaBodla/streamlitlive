@@ -98,7 +98,7 @@ if mode == "Live detection":
 
     webrtc_ctx = webrtc_streamer(
         key="example",
-        rtc_configuration={"iceServers": [{"urls": ["stun:stunserver.org:3478"]}],},
+        rtc_configuration={"iceServers": [{"urls": ["stun:stun4.l.google.com:19302"]}],},
         media_stream_constraints={"video": True, "audio": False},
         video_processor_factory=VideoProcessor,
         async_processing=True,
