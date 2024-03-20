@@ -1,7 +1,16 @@
-streamlit                             
-streamlit_webrtc
-opencv-python                             
+# streamlit                             
+# streamlit_webrtc
+# opencv-python                             
+# mediapipe==0.10.11
+# pandas
+# matplotlib
+# twilio
+
+opencv-python-headless==4.8.1.78
+pydub==0.25.1
+streamlit_webrtc==0.47.1
 mediapipe==0.10.11
-pandas
+twilio~=8.10.1
 matplotlib
-twilio
+pandas
+streamlit
