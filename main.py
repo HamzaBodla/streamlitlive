@@ -97,8 +97,9 @@ if mode == "Live detection":
             return av.VideoFrame.from_ndarray(img, format="bgr24")
 
     webrtc_ctx = webrtc_streamer(
-        key="example",
-        rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]},
+        key="WYH",
+        mode=WebRtcMode.SENDRECV,
+        rtc_configuration=RTC_CONFIGURATION,
         media_stream_constraints={"video": True, "audio": False},
         video_processor_factory=VideoProcessor,
         async_processing=True,
