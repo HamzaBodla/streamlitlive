@@ -138,7 +138,7 @@ if mode == "Live detection":
     obj = VideoProcessor()
 
     webrtc_ctx = webrtc_streamer(
-        key="example",
+        key="object-detection",
         mode=WebRtcMode.SENDRECV,
         rtc_configuration={"iceServers": get_ice_servers(),},
         video_frame_callback=obj.recv,
