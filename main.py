@@ -140,7 +140,7 @@ if mode == "Live detection":
     webrtc_ctx = webrtc_streamer(
         key="object-detection",
         mode=WebRtcMode.SENDRECV,
-        rtc_configuration={"iceServers":[{"urls":["stun:stun.cloudfare.com:3478"]}],},
+        rtc_configuration={"iceServers": get_ice_servers(),},
         video_frame_callback=obj.recv,
         media_stream_constraints={"video": True, "audio": False},
         # video_processor_factory=VideoProcessor,
