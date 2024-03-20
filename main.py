@@ -1,5 +1,4 @@
 import cv2
-import numpy as np
 import base64
 import av
 import matplotlib.pyplot as plt
