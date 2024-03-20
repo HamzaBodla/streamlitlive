@@ -134,12 +134,16 @@ if mode == "Live detection":
             img = frame.to_ndarray(format="bgr24")
             img = process(img)
             return av.VideoFrame.from_ndarray(img, format="bgr24")
+        
+    obj = VideoProcessor()
 
     webrtc_ctx = webrtc_streamer(
         key="example",
-        rtc_configuration={"iceServers": get_ice_servers()},
+        mode=WebRtcMode.SENDRECV,
+        rtc_configuration={"iceServers": get_ice_servers(), "iceTransportPolicy": "relay",},
+        video_frame_callback=obj.recv,
         media_stream_constraints={"video": True, "audio": False},
-        video_processor_factory=VideoProcessor,
+        # video_processor_factory=VideoProcessor,
         async_processing=True,
     )
 
